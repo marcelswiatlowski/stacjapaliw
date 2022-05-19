@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csspaliwo.css"
+    <title>Stacja Benzynowa</title>
+</head>
+<body class="Paliwo">
+        <p>Wybierz Rodzaj Paliwa</p>
+        <div>
+          <input type="radio" id="Benzyna"
+          name="222" value="paliwo" checked>
+          <label for="Benzyna">Benzyna</label>
+
+          <input type="radio" id="Ropa"
+           name="222" value="paliwo">
+          <label for="Ropa">Ropa</label>
+
+          <p> Podaj Ilość Paliwa</p>
+          <label for="litry"></label>
+          <input type="number" name="" id="litry">
+        <button onclick="oblicz()" >Oblicz</button>
+        <p id="wynik"></p>
+        </div>
+        <script>
+                function oblicz() 
+                {
+                     var A = document.getElementById('litry').value;
+                     A = parseInt(A);
+                     let G = document.getElementById('Benzyna').checked;
+                     let D = document.getElementById('Ropa').checked;
+                     var ilosc  = document.getElementById('litry').value;
+                     ilosc = parseInt(ilosc);
+                     var koszt 
+
+                    if (G == true){
+                      let A = ilosc * 6.7;
+                      document.getElementById('wynik').innerHTML =
+                             "koszt paliwa: " + A + "zl" ;
+                    }
+                    else if (D == true){
+                      let A = ilosc * 7.5;
+                      document.getElementById('wynik').innerHTML =
+                             "koszt paliwa: " + A + "zl" ;
+                    }
+
+                 
+                }
+                    
+                
+        </script>
+</body>
+</html>
